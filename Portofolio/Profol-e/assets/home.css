@@ -1,0 +1,101 @@
+#home {
+    display: block;
+}
+
+.tes {height: 100vh;}
+
+#home .box_intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: 0;
+    animation: opacity 8s forwards 1;
+}
+.sticky_nav nav .item,
+.sticky_nav nav .item:hover {transition: 1s;}
+.sticky_nav nav .item:hover {transform: translateY(-45px)}
+.sticky_nav nav {width: fit-content}
+
+#home .box_intro .loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+}
+
+#home .box_intro .loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--background-theme);
+    animation: loadingTop 6s ease 1;
+}
+
+#home .box_intro .loading span {
+    position: absolute;
+    left: calc(var(--lding) * 50px / 2);
+    font-size: 1.3em;
+    font-style: normal;
+    animation: loadingAnima calc(var(--lding, 1) * 1.5s / 2) ease-in 1;
+}
+
+#home .wrap {
+    color: var(--white);
+}
+
+@media (max-width: 942px) {#home .wrap .abstrak_design img {display: none}}
+#home .wrap .abstrak_design {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#home .wrap .sosmed a:hover {transform: scale(1.2);}
+
+#home .wrap .sosmed .item {
+    width: 35px;
+    height: 35px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+        z-index: 99;
+    } 
+    90% {
+        opacity: 1
+    }
+}
+@keyframes loadingTop {
+    0% {width: 0%}
+    20% {width: 100%}
+    25% {width: 95%}
+    30% {width: 100%}
+    80% {width: 40%}
+}
+@keyframes loadingAnima {
+    0% {
+        font-style: italic;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-width: 1120px) {
+    #home .wrap .abstrak_design img {width: 400px;}
+}

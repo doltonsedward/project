@@ -1,0 +1,88 @@
+@import "https://fonts.googleapis.com/css?family=Poppins";
+
+:root {
+  --white: #fff;
+  --white-transparent: rgba(225, 225, 225, 0.5);
+  --background-theme: #272727;
+}
+
+html {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  padding: 60px;
+  background-color: var(--background-theme);
+  user-select: none;
+}
+
+/* shorcut inline */
+.color-white {color: var(--white)}
+.color-theme {color: var(--background-theme)}
+.logo {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--white);
+}
+.logo p {font-size: 1.5em}
+.title {font-size: 30px}
+.subtitle {color: var(--white-transparent)}
+
+
+
+#menu {
+  display: none;
+  padding: 0 60px;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  background-color: var(--background-theme);
+}
+
+#menu .footer_item .item {
+  width: 90px;
+  padding: 5px 8px;
+  background-color: var(--white);
+  animation: startBtn 0.8s ease-in-out 1;
+}
+
+#menu .footer_item .item:hover {
+  width: 100px;
+  box-shadow: 0 0 8px var(--white);
+}
+
+@keyframes startBtn {
+  0% {width: 60px}
+}
+
+.sticky_nav {
+  position: sticky;
+  bottom: -40px;
+}
+
+.sticky_nav nav .item:hover,
+#home .wrap .sosmed a:hover .item {box-shadow: 0 0 10px var(--white)}
+
+.sticky_nav nav .item {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  color: var(--white);
+  background-color: var(--white);
+  border-radius: 70%;
+}
+
+.sticky_nav nav .item img {
+  width: 25px;
+}
+
+
+@media (max-width: 600px) {
+  body {padding: 50px 30px;}
+  .title {font-size: 25px}
+  .subtitle {font-size: 15px}
+}
+
+
+
