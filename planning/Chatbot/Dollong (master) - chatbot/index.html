@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Bot javascript" />
+	<title>Chatbot</title>
+	<link rel="icon" href="assets/bot.png" />
+	<link rel="stylesheet" href="assets/css/responsif.css" />
+	<link rel="stylesheet" href="assets/style.css" />
+	<link rel="stylesheet" href="assets/css/shortcut.css" />
+</head>
+
+<body id="chatbot">
+	<h1 align="center" class="title">DollosChatbot <p>beta v.0.35</p>
+	</h1>
+	<div id="container" class="containers">
+		<img id="pict_bot" src="assets/bot.png" alt="image robot" height="300px" />
+		<div id="chat" class="chats">
+			<!-- masih rencana -->
+			<header>
+				<div class="left_item">
+					<p class="logo">App</p>
+				</div>
+				<div class="right_item d-flex-only">
+					<div id="theme" class="cursor-pointer">
+						<div onclick="setDarkMode(true)" id="darkBtn" class=""><img src="assets/img/moon.svg" alt="">
+						</div>
+						<div onclick="setDarkMode(false)" id="lightBtn" class="hidden"><img src="assets/img/sun.svg"
+								alt="">
+						</div>
+					</div>
+					<div id="menuItem" class="cursor-pointer">
+						<div onclick="menuItem()">Menu</div>
+					</div>
+				</div>
+			</header>
+
+			<div id="box_setting" class="settings">
+				<div class="center-item item">
+					<img src="assets/img/process.svg" alt="Processing" />
+					<p align="center">Masih di proses</p>
+				</div>
+			</div>
+			<div id="messages" class="messages">
+				<div id="bot" class="bot response">
+					<span>Halo warganet!<br>ketikkan _help untuk beberapa shorcut</span>
+					<img src="assets/bot-mini.png" class="avatar">
+				</div>
+			</div>
+			<div class="bottomChats d-flex-only">
+				<div class="inputStyle">
+					<input id="input" type="text" placeholder="Ketikkan sesuatu..." autocomplete="off"
+						autofocus="true" />
+				</div>
+				<div id="submitBtn" class="b-radius-l">
+					<svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="15" viewBox="0 0 17.5 15">
+						<path id="Icon_material-send" data-name="Icon material-send"
+							d="M1.675,17.5,19.167,10,1.675,2.5,1.667,8.333,14.167,10l-12.5,1.667Z"
+							transform="translate(-1.667 -2.5)" fill="#2a2c3a" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function menuItem() {
+			bxSetting = document.getElementById('box_setting');
+			bxSetting.classList.toggle("active");
+		}
+	</script>
+	<script type="text/javascript" src="assets/js/index.js"></script>
+	<script type="text/javascript" src="assets/js/prompt.js"></script>
+	<script type="text/javascript" src="assets/js/otak.js"></script>
+	<script type="text/javascript" src="assets/js/speech.js"></script>
+	<script type="text/javascript" src="assets/js/darkmode.js"></script>
+</body>
+
+
+</html>
